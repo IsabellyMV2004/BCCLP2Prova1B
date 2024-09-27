@@ -1,5 +1,5 @@
 
-export const listaCandidatos = [
+export const candidatos = [
     {
         "id": 1,
         "email": "john@mail.com",

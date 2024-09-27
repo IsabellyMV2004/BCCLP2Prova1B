@@ -8,7 +8,7 @@ import {candidatos} from "../../dados/candidatos";
 export default function TelaPrincipal(props) {
     const [detalharCandidato, setDetalharCandidato]=useState(false);
     const [listaCandidatos, setListaCadidatos] = useState(candidatos);
-    const [questionarios,setQuestionarios] = useState();
+    const [candidatoSelecionado, setCandidatoSelecionado] =  useState(candidatos);
 
     return (
 
@@ -20,9 +20,13 @@ export default function TelaPrincipal(props) {
                     setListaCadidatos = {setListaCadidatos}
                     detalharCandidato={detalharCandidato}
                     setDetalharCandidato={setDetalharCandidato}
+                    candidatoSelecionado = {candidatoSelecionado}
+                    setCandidatoSelecionado = {setCandidatoSelecionado}
                     />
                 ) : (
                     <GridCandidatos listaCandidatos={listaCandidatos} 
+                    candidatoSelecionado = {candidatoSelecionado}
+                    setCandidatoSelecionado = {setCandidatoSelecionado}
                     />
                 )
             }
